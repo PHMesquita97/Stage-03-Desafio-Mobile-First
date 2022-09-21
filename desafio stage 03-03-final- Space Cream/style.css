@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+:root{
+    --ff-heading:font-family: 'Palanquin', sans-serif;
+    --ff-text:font-family: 'Staatliches', cursive;
+    font-size: 62.5%;
+
+    --bg-dark: hsl(218, 17%, 62%);
+    --bg-light:hsl(233, 100%, 97%);
+    --heading-lane:hsl(275, 18%, 79%);
+    --heading-text:hsl(0, 0%, 100%);
+    --bg-products:hsl(312, 91%, 96%);
+    --text-products:hsl(232, 17%, 35%);
+    --text-description:hsl(274, 84%, 12%);
+}
+.page{
+    min-width: 38.4rem;
+}
+
+
+header{
+    background: var(--bg-dark);
+
+    display: flex;
+    flex-direction: column;
+
+    
+}
+header svg{
+    display: flex;
+    margin: 3.2rem auto
+}
+
+header h1{
+    background: var(--heading-lane);
+    color: var(--heading-text);
+
+    padding: .8rem;
+
+    text-align: center;
+
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+
+    letter-spacing: 0.05rem;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 2.9rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.4rem 3.2rem;
+
+    background: var(--bg-light);
+}
+
+.wrapper p {
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    
+
+    color: var(--text-description);
+
+    margin: auto;
+
+    max-width: 30.5rem;
+}
+
+.cards{
+    padding-top: 6.3rem;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    position: relative;
+
+    margin-bottom: 3.2rem;
+
+    transition: 200ms;
+    animation: downTop 700ms 400ms backwards;
+}
+.card h2{
+    background: var(--heading-lane);
+    border: none;
+    border-radius: 2rem;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    width: fit-content;
+    padding: 0 2.4rem;
+
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+
+    color: var(--text-products);
+
+    animation: topDown 1000ms 400ms backwards;
+}
+
+.card:hover{
+    transform: scale(1.08);
+    filter: brightness(0.85);
+}
+
+/*==========Animations==========*/
+@keyframes downTop {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.6rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+
+
